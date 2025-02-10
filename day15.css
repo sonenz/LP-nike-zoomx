@@ -1,0 +1,170 @@
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #d509a0, #ff606e);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 40px 100px;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-cont {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo-cont img {
+    width: 110px ;
+}
+
+#side-bar img {
+    width: 30px;
+}
+
+#side-bar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#zapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 80px ;
+}
+
+#zapa img {
+    max-width: 700px;
+    width: 100%;
+    animation-name: mover;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#zapa::before {
+    content: "ZOOMX";
+    font-family: sans-serif;
+    width: 100%;
+    font-weight: 800;
+    opacity: .05;
+    position: absolute;
+    z-index: -1;
+    font-size: 20vw;
+    bottom: -20vw;
+    display: flex;
+    justify-content: center;
+}
+
+#txt {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 5px;
+    max-width: 672px;
+}
+
+button {
+    border: none;
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 00;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px ;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#redes {
+    display: flex;
+    flex-direction: column;
+}
+
+#redes i {
+    color: #fff;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width:700px) {
+    body {
+        padding: 15px 25px ;
+        justify-content: space-between;
+    }
+
+    header {
+        justify-content: space-between;
+        
+    }
+
+    header div {
+        margin: 0;
+    }
+
+    #logo-cont a img {
+        width: 75px;
+    }
+
+    footer {
+
+
+    }
+
+    #redes {
+        flex-direction: row;
+        
+    }
+
+    #redes i {
+        margin: 0 10px;
+    }
+}
+
+@keyframes mover {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50px);
+    }
+}
+
+#redes i:hover {
+    transform: scale(1.5);
+    cursor:pointer;
+    transition: transform .5s;
+} 
+
